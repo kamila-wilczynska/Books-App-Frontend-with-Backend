@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Book Club API Integration with React and Node.js - Frontend + Backend
+ Overview
+This project focuses on creating REST API endpoints to facilitate CRUD (create, read, update, delete) operations between a React front-end and a Node.js back-end.  
+This is CODECADEMY tutorial.   
+The application serves as a management tool for a local book club to efficiently track book titles and their reading schedules.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/kamila-wilczynska/Books-App/assets/107350829/9a742683-941e-490e-a5f6-de9cec7685b0)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Technologies  
+Language: JavaScript ES6  
+Front-end Framework: React  
+Back-end Environment: Node   
+Server Framework: Express   
 
-### `npm start`
+## Features  
+The application supports the following functionalities:  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Retrieve the initial list of books.  
+Add a new book with its reading schedule.  
+Update a book’s details and reading schedule.  
+Delete a book from the list.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup and Installation
+1. Clone the repository and navigate to the starting code.
+2. Install dependencies in both the frontend and backend directories - npm install
+3. Open two terminal windows - one for the frontend and one for the backend.
+4. Start the backend server: npm run start
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What I did I learn?
+deploy backend and frontend separately and connect them using fetch(`${API_ENDPOINT}, where my endpoint was the backend url address.
