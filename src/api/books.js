@@ -1,10 +1,11 @@
 // TODO: Import API_ENDPOINT
 import { API_ENDPOINT } from "./index.js";
+
 // TODO: Create the addNewBook function that takes in newTitle, newStart, and newEnd as arguments. Inside the function, create a POST request for the new book. Store the response as a JSON in a variable called newBook and return it at the end of the function.
 export const addNewBook = async (newTitle, newStart, newEnd) => {
 	const response = await fetch(`${API_ENDPOINT}/books`, {
 		method: "POST",
-		body: JSON.stringify({ //change js object into json, so it can be consumed by server
+		body: JSON.stringify({
 			title: newTitle,
 			start: newStart,
 			end: newEnd
@@ -13,7 +14,13 @@ export const addNewBook = async (newTitle, newStart, newEnd) => {
 			"Content-Type": "application/json",
 		},
 	});
-	// change back json into js object
+
+	if (!response.ok) {
+		const errorText = await response.text();
+		console.error('Error response from server:', errorText);
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
+
 	const newBook = await response.json();
 	return newBook;
 };
@@ -21,8 +28,12 @@ export const addNewBook = async (newTitle, newStart, newEnd) => {
 // TODO: Create the getBooks function that retrieves all of the books that have been saved to the back-end API
 export const getBooks = async () => {
 	const response = await fetch(`${API_ENDPOINT}/books`);
+	if (!response.ok) {
+		const errorText = await response.text();
+		console.error('Error response from server:', errorText);
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
 	const books = await response.json();
-
 	return books;
 };
 
@@ -40,6 +51,12 @@ export const updateBook = async (id, newTitle, newStart, newEnd) => {
 		},
 	});
 
+	if (!response.ok) {
+		const errorText = await response.text();
+		console.error('Error response from server:', errorText);
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
+
 	return response.status;
 };
 
@@ -48,6 +65,12 @@ export const deleteBook = async (id) => {
 	const response = await fetch(`${API_ENDPOINT}/books/${id}`, {
 		method: "DELETE",
 	});
+
+	if (!response.ok) {
+		const errorText = await response.text();
+		console.error('Error response from server:', errorText);
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
 
 	return response.status;
 };
